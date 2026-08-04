@@ -6,7 +6,7 @@
 /*   By: akacar <akacar@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/03 14:58:18 by akacar            #+#    #+#             */
-/*   Updated: 2026/08/03 16:10:25 by akacar           ###   ########.fr       */
+/*   Updated: 2026/08/04 13:32:27 by akacar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,15 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	if (!dest && !src)
 		return (NULL);
 	d = (unsigned char *) dest;
-	s = (const unsigned)
+	s = (const unsigned char *) src;
+	if (d > s)
+		while (n--)
+			d[n] = s[n];
+	else
+	{
+		i = 0;
+		while (i < n)
+			d[i] = s[i++];
+	}
+	return (dest);
 }

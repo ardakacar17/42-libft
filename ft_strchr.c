@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akacar <akacar@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/03 14:58:12 by akacar            #+#    #+#             */
-/*   Updated: 2026/08/04 13:31:00 by akacar           ###   ########.fr       */
+/*   Created: 2026/08/04 15:28:39 by akacar            #+#    #+#             */
+/*   Updated: 2026/08/04 15:38:08 by akacar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+char	*ft_strchr(const char *s, int c)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	return (0);
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] == c)
+			return ((char *) & s[i]);
+		i++;
+	}
+	if ((char) c == '\0')
+		return ((char *) & s[i]);
+	return (NULL);
 }
