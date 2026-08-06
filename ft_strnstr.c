@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akacar <akacar@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/04 13:49:22 by akacar            #+#    #+#             */
-/*   Updated: 2026/08/06 18:04:00 by akacar           ###   ########.fr       */
+/*   Created: 2026/08/06 14:32:58 by akacar            #+#    #+#             */
+/*   Updated: 2026/08/06 18:50:10 by akacar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	dst_len;
-	size_t	src_len;
 	size_t	i;
+	size_t	j;
 
-	dst_len = 0;
-	src_len = ft_strlen(src);
-	while (dst[dst_len] != '\0' && dst_len < size)
-		dst_len++;
-	if (size <= dst_len)
-		return (size + src_len);
+	if (little[0] == '\0')
+		return ((char *) & big[0]);
 	i = 0;
-	while (src[i] != '\0' && (dst_len + i) < (size - 1))
+	while (big[i] != '\0' && i < len)
 	{
-		dst[dst_len + i] = src[i];
+		j = 0;
+		while (big[i + j] == little[j] && (i + j) < len)
+		{
+			j++;
+		}
+		if (little[j] == '\0')
+			return ((char *) & big[i]);
 		i++;
 	}
-	dst[dst_len + i] = '\0';
-	return (dst_len + src_len);
+	return (NULL);
 }
