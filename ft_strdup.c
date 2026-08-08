@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akacar <akacar@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/06 14:06:20 by akacar            #+#    #+#             */
-/*   Updated: 2026/08/08 14:05:29 by akacar           ###   ########.fr       */
+/*   Created: 2026/08/08 01:44:33 by akacar            #+#    #+#             */
+/*   Updated: 2026/08/08 14:05:26 by akacar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+char	*strdup(const char *s)
 {
-	unsigned char	*ptr1;
-	unsigned char	*ptr2;
-	size_t			i;
+	char	*ptr;
+	size_t	len;
 
-	ptr1 = (unsigned char *) s1;
-	ptr2 = (unsigned char *) s2;
-	i = 0;
-	while (i < n)
-	{
-		if (ptr1[i] != ptr2[i])
-			return (ptr1[i] - ptr2[i]);
-		i++;
-	}
-	return (0);
+	len = ft_strlen(s);
+	ptr = malloc(len + 1);
+	if (!ptr)
+		return (NULL);
+	ft_memcpy(ptr, s, len + 1);
+	return (ptr);
 }
