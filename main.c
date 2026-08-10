@@ -6,7 +6,7 @@
 /*   By: akacar <akacar@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/03 16:10:15 by akacar            #+#    #+#             */
-/*   Updated: 2026/08/06 18:16:09 by akacar           ###   ########.fr       */
+/*   Updated: 2026/08/10 18:46:12 by akacar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,12 @@
 int	main(void)
 {
 	char	str[] = "Merhaba 42";
-	char	src_memcpy[] = "42 Istanbul";
-	char	dest_memcpy[20];
+	char	str_memset[] = "Merhaba 42";
+	char	str_bzero[] = "Merhaba 42";
+	char	src[] = "42 Istanbul";
+	char	dest[20] = "Merhaba";
+	char	str_move[] = "Cprogramming";
+	char	dst_str[20];
 
 	printf("%d\n", ft_isalpha('A'));
 	printf("%d\n", ft_isdigit('5'));
@@ -25,23 +29,18 @@ int	main(void)
 	printf("%d\n", ft_isalnum('9'));
 	printf("%d\n", ft_isascii('A'));
 	printf("%d\n", ft_isprint('-'));
-	printf("%ld\n", ft_strlen("Merhaba 42"));
-	char	str_memset[] = "Merhaba 42";
-
+	printf("%zu\n", ft_strlen(str));
 	ft_memset(str_memset, '*', 5);
 	printf("%s\n", str_memset);
-	char	str_bzero[] = "Merhaba 42";
-
 	ft_bzero(str_bzero, 7);
 	printf("%s\n", str_bzero + 7);
-	char	src[] = "42 Istanbul";
-	char	dest[20];
-
-	ft_memcpy(dest, src, 12);
+	printf("%zu\n", ft_strlcat(dest, "Arda", sizeof(dest)));
 	printf("%s\n", dest);
-	char	str_move[] = "Cprogramming";
-
+	ft_memcpy(dest, src, sizeof(src));
+	printf("%s\n", dest);
 	ft_memmove(str_move + 2, str_move, 5);
 	printf("%s\n", str_move);
+	ft_strlcpy(dst_str, "Merhaba 42", sizeof(dst_str));
+	printf("%s\n", dst_str);
 	return (0);
 }

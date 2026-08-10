@@ -6,13 +6,13 @@
 /*   By: akacar <akacar@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/08 01:44:33 by akacar            #+#    #+#             */
-/*   Updated: 2026/08/08 14:05:26 by akacar           ###   ########.fr       */
+/*   Updated: 2026/08/10 18:47:00 by akacar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	char	*ptr;
 	size_t	len;
