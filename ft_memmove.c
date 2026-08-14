@@ -6,7 +6,7 @@
 /*   By: akacar <akacar@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/03 14:58:18 by akacar            #+#    #+#             */
-/*   Updated: 2026/08/10 18:47:40 by akacar           ###   ########.fr       */
+/*   Updated: 2026/08/14 01:00:20 by akacar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,10 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	{
 		i = 0;
 		while (i < n)
-			d[i] = s[i++];
+		{
+			d[i] = s[i];
+			i++;
+		}
 	}
 	return (dest);
 }
