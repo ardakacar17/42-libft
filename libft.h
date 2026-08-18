@@ -6,7 +6,7 @@
 /*   By: akacar <akacar@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/03 14:58:23 by akacar            #+#    #+#             */
-/*   Updated: 2026/08/15 17:26:16 by akacar           ###   ########.fr       */
+/*   Updated: 2026/08/18 18:35:25 by akacar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,7 @@ t_list			*ft_lstlast(t_list *lst);
 void			ft_lstadd_back(t_list **lst, t_list *new);
 void			ft_lstdelone(t_list *lst, void (*del)(void *));
 void			ft_lstclear(t_list **lst, void (*del)(void *));
+void			ft_lstiter(t_list *lst, void (*f)(void *));
+t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
