@@ -6,7 +6,7 @@
 /*   By: akacar <akacar@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 16:03:46 by akacar            #+#    #+#             */
-/*   Updated: 2026/08/15 17:26:48 by akacar           ###   ########.fr       */
+/*   Updated: 2026/08/19 18:00:59 by akacar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
-		return ;
+		return (NULL);
 	while (lst->next != NULL)
 		lst = lst->next;
 	return (lst);

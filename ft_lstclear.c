@@ -6,7 +6,7 @@
 /*   By: akacar <akacar@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 17:10:43 by akacar            #+#    #+#             */
-/*   Updated: 2026/08/15 17:28:51 by akacar           ###   ########.fr       */
+/*   Updated: 2026/08/19 18:05:29 by akacar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 
 	if (!lst || !del)
 		return ;
-	while (*lst != !NULL)
+	while (*lst != NULL)
 	{
 		tmp = (*lst)->next;
 		ft_lstdelone(*lst, del);
