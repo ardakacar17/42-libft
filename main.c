@@ -6,7 +6,7 @@
 /*   By: akacar <akacar@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/03 16:10:15 by akacar            #+#    #+#             */
-/*   Updated: 2026/08/19 22:23:42 by akacar           ###   ########.fr       */
+/*   Updated: 2026/08/20 13:41:44 by akacar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,10 @@ int main (void)
 	printf("%d\n" , ft_memcmp("Ferhat" , "Ayşe", 5));
 
 	printf("%s\n", ft_strnstr("FERHATAYSEARDA", "ARDA", 14));
+
+	printf("%d\n", ft_atoi("-42Istanbul"));
+
+	
 	return (0);
 }
 

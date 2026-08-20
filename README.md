@@ -7,14 +7,13 @@ Libft, 42 müfredatının ilk projesidir. Bu projenin amacı, gelecekteki müfre
 Bu kütüphane üç ana bölümden oluşmaktadır:
 * **Bölüm 1 - Libc Fonksiyonları:** Standart C kütüphanesi fonksiyonlarının (örn. `ft_strlen`, `ft_memset`, `ft_memcpy`, `ft_isalpha`) özel olarak yeniden yazılmış versiyonları.
 * **Bölüm 2 - Ek Fonksiyonlar:** Standart libc'nin parçası olmayan ancak string manipülasyonu ve bellek tahsisi için oldukça faydalı yardımcı fonksiyonlar (örn. `ft_split`, `ft_strtrim`, `ft_itoa`).
-* **Bölüm 3 - Bağlı Listeler (Bonus):** Bağlı liste (linked list) veri yapılarını oluşturmak, üzerinde gezinmek ve değiştirmek için tasarlanmış fonksiyonlar (örn. `ft_lstnew`, `ft_lstadd_front`, `ft_lstsize`).
+* **Bölüm 3 - Bağlı Listeler:** Bağlı liste (linked list) veri yapılarını oluşturmak, üzerinde gezinmek ve değiştirmek için tasarlanmış fonksiyonlar (örn. `ft_lstnew`, `ft_lstadd_front`, `ft_lstsize`).
 
 ## Talimatlar
 Kütüphaneyi derlemek için projede bulunan `Makefile` dosyasını kullanabilirsiniz. Derleyici olarak katı kurallara sahip (`-Wall -Wextra -Werror`) `cc` kullanılmıştır.
 
 Terminalde aşağıdaki komutları çalıştırabilirsiniz:
 * `make` - Zorunlu kısmı derler ve `libft.a` kütüphanesini oluşturur.
-* `make bonus` - Bağlı liste fonksiyonlarını derler ve `libft.a`'ya dâhil eder.
 * `make clean` - Derleme sırasında oluşan obje (`.o`) dosyalarını siler.
 * `make fclean` - Obje dosyalarını ve ana `libft.a` dosyasını tamamen siler.
 * `make re` - Kütüphaneyi temizleyip sıfırdan tamamen yeniden derler.

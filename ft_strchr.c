@@ -6,7 +6,7 @@
 /*   By: akacar <akacar@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 15:28:39 by akacar            #+#    #+#             */
-/*   Updated: 2026/08/10 18:47:02 by akacar           ###   ########.fr       */
+/*   Updated: 2026/08/21 01:38:36 by akacar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i] == (char) c)
 			return ((char *) & s[i]);
 		i++;
 	}
