@@ -6,7 +6,7 @@
 /*   By: akacar <akacar@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/03 16:10:15 by akacar            #+#    #+#             */
-/*   Updated: 2026/08/20 13:41:44 by akacar           ###   ########.fr       */
+/*   Updated: 2026/08/21 20:26:35 by akacar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,20 @@
 
 int main (void)
 {
+	// int a = 5;
+	// ft_memset(&a, 255, 4);
+	// printf("%d\n", a);
+	// ft_memset(&a, 91, 2);
+	// ft_memset(&a, 240, 1);
+
+	// printf("%d\n", a);
+	// char d[] = "yahya";
+	// ft_memcpy(d+2, d, 10);
+	// printf("%s\n", d+2);
+	// char s[] = "yahya";
+	// ft_memmove(s+2, s, 10);
+	//  printf("%s\n", s+2);
+	
 	printf("%d\n", ft_isalpha('A'));
 	
 	printf("%d\n", ft_isdigit('5'));
@@ -58,9 +72,9 @@ int main (void)
 	
 	printf("%c\n", ft_tolower('A'));
 	
-	printf("%p\n", ft_strchr("Abdurrezzak", 'a'));
+	printf("%s\n", ft_strchr("Abdurrezzak", 'a'));
 	
-	printf("%p\n", ft_strrchr("Parlak", 'r'));
+	printf("%s\n", ft_strrchr("Parlak", 'r'));
 
 	printf("%d\n", ft_strncmp("Arda", "Mete" , 4));
 	
@@ -72,7 +86,28 @@ int main (void)
 
 	printf("%d\n", ft_atoi("-42Istanbul"));
 
+	int *h = ft_calloc(3, sizeof(int));
+	printf("%d\n", h[0]);
+	printf("%d\n", h[1]);
+	printf("%d\n", h[2]);
+	free(h);
+
+	char *i = "42 Istanbul";
+	char *i2;
+	i2 = ft_strdup(i);
+	printf("%s\n", i2);
+
+	printf("%s\n", ft_substr("42 Istanbul", 6, 5));
+
+	printf("%s\n", ft_strjoin("Arda", "Mete"));
+
+	printf("%s\n", ft_strtrim("----42 Istanbul---", "-"));
+
+	char **j = ft_split("Arda---Mete---Ayse", '-');
+	printf("%s%s%s\n", j[0], j[1], j[2]);
+
+	printf("%s\n" ,ft_itoa(-13786));
+
 	
 	return (0);
 }
-

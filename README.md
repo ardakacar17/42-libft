@@ -1,23 +1,23 @@
 *This project has been created as part of the 42 curriculum by akacar.*
 
-## Açıklama
-Libft, 42 müfredatının ilk projesidir. Bu projenin amacı, gelecekteki müfredat görevleri boyunca kullanılacak çok sayıda genel amaçlı fonksiyonu içerecek bir C kütüphanesini sıfırdan kodlamaktır. Standart C kütüphanesi (libc) davranışlarını, bellek yönetimini (memory allocation) ve temel veri yapılarını derinlemesine anlamayı sağlar.
+# Description
+Libft is the first project of the 42 curriculum. The aim of this project is to code a C library from scratch, which will contain numerous general-purpose functions to be used throughout future curriculum assignments. It provides a deep understanding of standard C library (libc) behaviors, memory allocation, and basic data structures.
 
-## Detaylı Kütüphane İçeriği
-Bu kütüphane üç ana bölümden oluşmaktadır:
-* **Bölüm 1 - Libc Fonksiyonları:** Standart C kütüphanesi fonksiyonlarının (örn. `ft_strlen`, `ft_memset`, `ft_memcpy`, `ft_isalpha`) özel olarak yeniden yazılmış versiyonları.
-* **Bölüm 2 - Ek Fonksiyonlar:** Standart libc'nin parçası olmayan ancak string manipülasyonu ve bellek tahsisi için oldukça faydalı yardımcı fonksiyonlar (örn. `ft_split`, `ft_strtrim`, `ft_itoa`).
-* **Bölüm 3 - Bağlı Listeler:** Bağlı liste (linked list) veri yapılarını oluşturmak, üzerinde gezinmek ve değiştirmek için tasarlanmış fonksiyonlar (örn. `ft_lstnew`, `ft_lstadd_front`, `ft_lstsize`).
+## Detailed Library Contents
+This library consists of three main parts:
+* **Part 1 - Libc Functions:** Custom rewritten versions of standard C library functions (e.g., `ft_strlen`, `ft_memset`, `ft_memcpy`, `ft_isalpha`).
+* **Part 2 - Additional Functions:** Useful utility functions for string manipulation and memory allocation that are not part of the standard libc (e.g., `ft_split`, `ft_strtrim`, `ft_itoa`).
+* **Part 3 - Linked Lists:** Functions designed to create, iterate over, and manipulate linked list data structures (e.g., `ft_lstnew`, `ft_lstadd_front`, `ft_lstsize`).
 
-## Talimatlar
-Kütüphaneyi derlemek için projede bulunan `Makefile` dosyasını kullanabilirsiniz. Derleyici olarak katı kurallara sahip (`-Wall -Wextra -Werror`) `cc` kullanılmıştır.
+## Instructions
+You can use the provided `Makefile` in the project to compile the library. The `cc` compiler is used with strict flags (`-Wall -Wextra -Werror`).
 
-Terminalde aşağıdaki komutları çalıştırabilirsiniz:
-* `make` - Zorunlu kısmı derler ve `libft.a` kütüphanesini oluşturur.
-* `make clean` - Derleme sırasında oluşan obje (`.o`) dosyalarını siler.
-* `make fclean` - Obje dosyalarını ve ana `libft.a` dosyasını tamamen siler.
-* `make re` - Kütüphaneyi temizleyip sıfırdan tamamen yeniden derler.
+You can run the following commands in the terminal:
+* `make` - Compiles the mandatory part and creates the `libft.a` library.
+* `make clean` - Removes the object (`.o`) files generated during compilation.
+* `make fclean` - Completely removes the object files and the main `libft.a` file.
+* `make re` - Cleans and completely recompiles the library from scratch.
 
-## Kaynaklar
-* **Dokümantasyon:** Orijinal libc fonksiyonlarının tam olarak beklenen davranışlarını, dönüş değerlerini ve uç durumlarını anlamak için `man` sayfalarından (örn. `man 3 string`) yoğun şekilde faydalanılmıştır.
-* **Yapay Zeka (AI) Kullanımı:** Geliştirme iş akışımda GitHub Copilot (OpenAI ve Anthropic modellerine erişim sağlayarak) kullanılmıştır. Yapay zeka kesinlikle doğrudan kod veya mantık üretmek için değil; yalnızca karmaşık işaretçi (pointer) aritmetiğini teorik olarak anlamak, `memmove` gibi bellek çakışması (overlap) konseptlerini netleştirmek ve 42 Norm kurallarını kavramak için bir rehber olarak değerlendirilmiştir. Projenin kodlanması ve problem çözme süreçleri tamamen kişisel entelektüel çabayla gerçekleştirilmiştir.
+## Resources
+* **Documentation:** The `man` pages (e.g., `man 3 string`) were extensively utilized to understand the exact expected behaviors, return values, and edge cases of the original libc functions.
+* **AI Usage:** GitHub Copilot (providing access to OpenAI and Anthropic models) was used in my development workflow. AI was strictly not used to generate direct code or logic; it was solely utilized as a guide to theoretically understand complex pointer arithmetic, clarify concepts like memory overlap in `memmove`, and grasp the 42 Norm rules. The coding and problem-solving processes of the project were accomplished entirely through personal intellectual effort.
