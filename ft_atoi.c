@@ -6,11 +6,9 @@
 /*   By: akacar <akacar@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 14:41:19 by akacar            #+#    #+#             */
-/*   Updated: 2026/08/12 21:03:05 by akacar           ###   ########.fr       */
+/*   Updated: 2026/08/22 18:09:26 by akacar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {

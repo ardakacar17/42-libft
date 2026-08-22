@@ -6,11 +6,9 @@
 /*   By: akacar <akacar@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 14:52:55 by akacar            #+#    #+#             */
-/*   Updated: 2026/08/10 18:46:17 by akacar           ###   ########.fr       */
+/*   Updated: 2026/08/22 18:13:19 by akacar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_toupper(int c)
 {

@@ -6,11 +6,9 @@
 /*   By: akacar <akacar@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 15:20:42 by akacar            #+#    #+#             */
-/*   Updated: 2026/08/10 18:46:19 by akacar           ###   ########.fr       */
+/*   Updated: 2026/08/22 18:13:01 by akacar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_tolower(int c)
 {
