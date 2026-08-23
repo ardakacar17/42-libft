@@ -6,7 +6,7 @@
 /*   By: akacar <akacar@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/03 16:10:15 by akacar            #+#    #+#             */
-/*   Updated: 2026/08/22 19:05:12 by akacar           ###   ########.fr       */
+/*   Updated: 2026/08/24 01:26:10 by akacar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,11 +100,11 @@ int main (void)
 	ft_bzero(c, 3);
 	printf("%s\n", c + 3);
 	
-	char d[20];
-	ft_memcpy(d, "Murat", 6);
+	char d[] = "Murat";
+	ft_memcpy(d + 2, d, 3);
 	printf("%s\n", d);
 	
-	char e[20] = "Merhaba";
+	char e[] = "Merhaba";
 	ft_memmove(e + 5, e, 6);
 	printf("%s\n" , e);
 	
@@ -164,7 +164,15 @@ int main (void)
 	ft_striteri(l , to_lower);
 	printf("%s\n" , l);
 
-	
+	int dosya_fd = open("test.txt", O_CREAT | O_WRONLY | O_TRUNC, 0644);
+
+	if (dosya_fd == -1)
+		return (1);
+	ft_putstr_fd("Bu cümle ekranda görünmeyecek", dosya_fd);
+	ft_putstr_fd("test.txt dosyasının içine basıldı.\n", dosya_fd);
+	ft_putendl_fd("Bunu da alt satıra geçerek yazdı.", dosya_fd);
+	ft_putnbr_fd(-2147483648, dosya_fd);
+	close(dosya_fd);
 	// t_list *head = ft_lstnew(ft_strdup("orta vagon"));
 	// ft_lstadd_front(&head, ft_lstnew(ft_strdup("ilk vagon")));
 	// ft_lstadd_back(&head, ft_lstnew(ft_strdup("son vagon")));
@@ -199,6 +207,8 @@ int main (void)
 
 	t_list *dugum = ft_lstnew(ft_strdup("serdar"));
 	ft_lstadd_front(&dugum, ft_lstnew(ft_strdup("eren")));
-	print_content(dugum->next->content);
+	ft_lstadd_back(&dugum, ft_lstnew(ft_strdup("basar")));
+	print_content(dugum->next->next->content);
+	printf("NULL\n\n");
 	return (0);
 }
