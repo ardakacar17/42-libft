@@ -6,7 +6,7 @@
 /*   By: akacar <akacar@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/03 16:10:15 by akacar            #+#    #+#             */
-/*   Updated: 2026/08/24 01:26:10 by akacar           ###   ########.fr       */
+/*   Updated: 2026/08/24 22:54:10 by akacar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,18 @@ void func(void *content)
 void *mapa(void *content)
 {
 	char *new = ft_strdup((char *)content);
-	if (new && new[0] >= 'a' && new[0] >= 'z')
-		new[0] -= 32;
+	int i;
+	
+	i = 0;
+
+	if (!new)
+		return (NULL);
+	while (new[i] != '\0')
+	{
+		if (new[i] >= 'a' && new[i] <= 'z')
+			new[i] -= 32;
+	i++;
+	}
 	return (new);
 }
 
@@ -60,12 +70,12 @@ void del_content(void *content)
 
 int main (void)
 {
-	// int a1 = 5;
-	// ft_memset(&a1, 255, 4);
-	// printf("%d\n", a1);
-	// ft_memset(&a1, 91, 2);
-	// ft_memset(&a1, 240, 1);
-	// printf("%d\n", a1);
+	int a1 = 5;
+	ft_memset(&a1, 255, 4);
+	printf("%d\n", a1);
+	ft_memset(&a1, 91, 2);
+	ft_memset(&a1, 240, 1);
+	printf("%d\n", a1);
 	
 	
 	
@@ -164,36 +174,34 @@ int main (void)
 	ft_striteri(l , to_lower);
 	printf("%s\n" , l);
 
-	int dosya_fd = open("test.txt", O_CREAT | O_WRONLY | O_TRUNC, 0644);
+	// int dosya_fd = open("test.txt", O_CREAT | O_WRONLY | O_TRUNC, 0644);
 
-	if (dosya_fd == -1)
-		return (1);
-	ft_putstr_fd("Bu cümle ekranda görünmeyecek", dosya_fd);
-	ft_putstr_fd("test.txt dosyasının içine basıldı.\n", dosya_fd);
-	ft_putendl_fd("Bunu da alt satıra geçerek yazdı.", dosya_fd);
-	ft_putnbr_fd(-2147483648, dosya_fd);
-	close(dosya_fd);
-	// t_list *head = ft_lstnew(ft_strdup("orta vagon"));
-	// ft_lstadd_front(&head, ft_lstnew(ft_strdup("ilk vagon")));
-	// ft_lstadd_back(&head, ft_lstnew(ft_strdup("son vagon")));
+	// if (dosya_fd == -1)
+	// 	return (1);
+	// ft_putstr_fd("Bu cümle ekranda görünmeyecek", dosya_fd);
+	// ft_putstr_fd("test.txt dosyasının içine basıldı.\n", dosya_fd);
+	// ft_putendl_fd("Bunu da alt satıra geçerek yazdı.", dosya_fd);
+	// ft_putnbr_fd(-2147483648, dosya_fd);
+	// close(dosya_fd);
+	t_list *head = ft_lstnew(ft_strdup("orta vagon"));
+	ft_lstadd_front(&head, ft_lstnew(ft_strdup("ilk vagon")));
+	ft_lstadd_back(&head, ft_lstnew(ft_strdup("son vagon")));
 
-	// printf("%d\n", ft_lstsize(head));
-	// ft_lstiter(head, print_content);
-	// printf("NULL\n\n");
+	printf("%d\n", ft_lstsize(head));
+	ft_lstiter(head, print_content);
+	printf("NULL\n\n");
 	
-	// t_list *new_list = ft_lstmap(head, mapa, del_content);
-	// ft_lstiter(new_list, print_content);
-	// printf("NULL\n\n");
+	t_list *new_list = ft_lstmap(head, mapa, del_content);
+	ft_lstiter(new_list, print_content);
+	printf("NULL\n\n");
 
 	// t_list *ghost_node = ft_lstnew(ft_strdup("Silinecek Vagon"));
 	// ft_lstdelone(ghost_node, del_content);
-	// if(ghost_node == NULL)
-	// 	printf("hayalet tren silindi\n");
 
-	// ft_lstclear(&head, del_content);
-	// ft_lstclear(&new_list, del_content);
-	// if(head == NULL && new_list == NULL)
-	// 	printf("Bütün temizlik yapildi.\n");
+	ft_lstclear(&head, del_content);
+	ft_lstclear(&new_list, del_content);
+	if(head == NULL && new_list == NULL)
+		printf("Bütün temizlik yapildi.\n");
 
 	// t_list *node = ft_lstnew(ft_strdup("eren"));
 	// ft_lstadd_back(&node, ft_lstnew(ft_strdup("beren")));
@@ -205,10 +213,10 @@ int main (void)
 	// printf("NULL\n\n");
 	// ft_lstclear(&node , del_content);
 
-	t_list *dugum = ft_lstnew(ft_strdup("serdar"));
-	ft_lstadd_front(&dugum, ft_lstnew(ft_strdup("eren")));
-	ft_lstadd_back(&dugum, ft_lstnew(ft_strdup("basar")));
-	print_content(dugum->next->next->content);
-	printf("NULL\n\n");
+	// t_list *dugum = ft_lstnew(ft_strdup("serdar"));
+	// ft_lstadd_front(&dugum, ft_lstnew(ft_strdup("eren")));
+	// ft_lstadd_back(&dugum, ft_lstnew(ft_strdup("basar")));
+	// print_content(dugum->next->next->content);
+	// printf("NULL\n\n");
 	return (0);
 }
