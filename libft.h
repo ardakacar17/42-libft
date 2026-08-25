@@ -6,14 +6,13 @@
 /*   By: akacar <akacar@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/03 14:58:23 by akacar            #+#    #+#             */
-/*   Updated: 2026/08/21 19:14:56 by akacar           ###   ########.fr       */
+/*   Updated: 2026/08/25 15:49:39 by akacar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
 
